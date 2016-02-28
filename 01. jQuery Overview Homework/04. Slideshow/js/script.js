@@ -1,6 +1,7 @@
 var count = 1;
 timeout();
 
+//Function to change the images (works with 5 images)
 function changeSlider() {
     if (count >= 6) {
         count = 1
@@ -9,12 +10,14 @@ function changeSlider() {
         count = 5;
     }
 
+    //Dynamic pictures url
     var picUrl = 'url("images/' + count + '.jpg")';
     //$('#slider').css('background', picUrl);
 
+    //Fade in effect
     $('#slider').animate({opacity: 0.5}, 0).css({'background': picUrl}).animate({opacity: 1}, 500);
 
-
+    //Switch case to add different content for the sliders
     switch(count) {
         case 1:
             $('h1').text('JavaScript Applications');
@@ -48,12 +51,14 @@ function changeSlider() {
     count++;
 }
 
+//Function for slider timeout
 function timeout() {
-    $('#slider').animate(1000);
     changeSlider();
     setTimeout(timeout, 5000);
 }
 
+
+//On-click events for the next and previous buttons
 $('#left').click(function() {
     count = count - 2;
     changeSlider();
