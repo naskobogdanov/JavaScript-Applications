@@ -1,0 +1,58 @@
+#wrapper {
+    margin: 0  auto;
+    width: 700px;
+    margin-top: 20px;;
+}
+
+#slider {
+    height: 300px;
+    text-align: center;
+    //line-height: 300px;
+}
+
+h1, p {
+    color: white;
+    text-shadow: 1px 1px black;
+    background-color: rgba(51, 51, 51, 0.3);
+}
+
+p {
+    height: 130px;
+    padding-top: 60px;
+}
+
+button {
+    margin-top: 140px;
+    padding: 5px;
+    font-size: 30px;
+    background-color: transparent;
+    border: 0;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+button:active {
+    border: 10px;
+}
+
+#innerDiv {
+    height: 200px;
+}
+
+a {
+    text-decoration: none;
+    background-color: rgba(51, 51, 51, 0.3);
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}

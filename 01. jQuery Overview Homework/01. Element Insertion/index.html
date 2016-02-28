@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element Insertion</title>
+</head>
+<body>
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li class="bafter">Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+    </ul>
+<script src="js/jquery-2.2.1.js"></script>
+<script>
+    $('.bafter').before('<p>Test Before</p>');
+    $('.bafter').after('<p>Test After</p>');
+</script>
+</body>
+</html>
