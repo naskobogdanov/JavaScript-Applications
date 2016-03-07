@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Countries</title>
+    <style>
+        #wrapper {
+            margin: 0 auto;
+            width: 250px;
+        }
+        .buttons {
+            float: right;
+        }
+        h3 {
+            margin-bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h3>Country List</h3>
+        <div id="countriesList"></div>
+
+        <h3>Add a new country!</h3>
+        <input type="text" id="input" placeholder="Add country name">
+        <button class="buttons" id="button">Add</button><br/><br/>
+        <hr>
+
+        <h3>Delete country</h3>
+        <select name="select" id="select"></select>
+        <button class="buttons" id="deleteButton">Delete</button><br/><br/>
+        <hr>
+
+        <h3>Edit a country name</h3>
+        <select name="select" id="editSelect"></select>
+        <input type="text" id="changeInput" placeholder="New country name">
+        <button class="buttons" id="changeButton">Change</button><br/><br/>
+        <hr>
+
+        <div id="errors"></div>
+    </div>
+<script src="js/jquery-2.2.1.js"></script>
+<script src="js/countryList.js"></script>
+<script src="js/add.js"></script>
+<script src="js/delete.js"></script>
+<script src="js/edit.js"></script>
+</body>
+</html>

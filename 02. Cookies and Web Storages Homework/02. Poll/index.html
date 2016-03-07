@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll</title>
+</head>
+<style>
+    #wrapper {
+        width: 700px;
+        margin: 0 auto;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <div id="counter"></div>
+        <form id="form" name="form" action="#" method="get">
+            <fieldset>
+                <legend>Pool Questions</legend>
+                <div>
+                    <label id="1" class="question">1. Which one is the first serch engine in internet?</label><br/>
+                    <input id="11" type="radio" name="q1" value="Google">
+                    <label>Google</label><br/>
+                    <input id="12" type="radio" name="q1" value="Archie">
+                    <label>Archie</label><br/>
+                    <input id="13" type="radio" name="q1" value="Altavista">
+                    <label>Altavista</label><br/>
+                    <input id="14" type="radio" name="q1" value="WAIS">
+                    <label>WAIS</label><br/>
+                </div><br/>
+                <div>
+                    <label id="2" class="question">2. Number of bit used by the IPv6 address?</label><br/>
+                    <input id="21" type="radio" name="q2" value="32 bit">
+                    <label>32 bit</label><br/>
+                    <input id="22" type="radio" name="q2" value="64 bit">
+                    <label>64 bit</label><br/>
+                    <input id="23" type="radio" name="q2" value="128 bit">
+                    <label>128 bit</label><br/>
+                    <input id="24" type="radio" name="q2" value="256 bit">
+                    <label>256</label><br/>
+                </div><br/>
+                <div>
+                    <label id="3" class="question">3. Which one is the first web browser invented in 1990?</label><br/>
+                    <input id="31" type="radio" name="q3" value="Internet Explorer">
+                    <label>Internet Explorer</label><br/>
+                    <input id="32" type="radio" name="q3" value="Mosaic">
+                    <label>Mosaic</label><br/>
+                    <input id="33" type="radio" name="q3" value="Mozilla">
+                    <label>Mozilla</label><br/>
+                    <input id="34" type="radio" name="q3" value="WorldWideWeb">
+                    <label>WorldWideWeb</label><br/>
+                </div><br/>
+                <div>
+                    <label id="4" class="question">4. First computer virus is known as:</label><br/>
+                    <input id="41" type="radio" name="q4" value="Rabbit">
+                    <label>Rabbit</label><br/>
+                    <input id="42" type="radio" name="q4" value="Creeper Virus">
+                    <label>Creeper Virus</label><br/>
+                    <input id="43" type="radio" name="q4" value="Elk Cloner">
+                    <label>Elk Cloner</label><br/>
+                    <input id="44" type="radio" name="q4" value="SCA Virus">
+                    <label>SCA Virus</label><br/>
+                </div><br/>
+                <div>
+                    <label id="5" class="question">5. Firewall in computer is used for?</label><br/>
+                    <input id="51" type="radio" name="q5" value="Security">
+                    <label>Security</label><br/>
+                    <input id="52" type="radio" name="q5" value="Data Transmission">
+                    <label>Data Transmission</label><br/>
+                    <input id="53" type="radio" name="q5" value="Authentication">
+                    <label>Authentication</label><br/>
+                    <input id="54" type="radio" name="q5" value="Monitoring">
+                    <label>Monitoring</label><br/>
+                </div><br/>
+            </fieldset>
+
+        </form>
+        <button id="submit">Submit</button>
+        <div id="output"></div>
+    </div>
+    <script src="js/jquery-2.2.1.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
