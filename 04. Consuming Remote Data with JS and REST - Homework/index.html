@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books List</title>
+    <style>
+        #wrapper {
+            margin: 0  auto;
+            width: 700px;
+            margin-top: 20px;;
+        }
+
+        th, td {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            height: 20px;
+            text-align: center;
+            background-color: tomato;
+        }
+        td {
+            padding: 0 10px 0 10px;
+        }
+
+        .delButton {
+            background-color: tomato;
+            border: 0 solid black;
+            cursor: pointer;
+        }
+
+        .editButton {
+            background-color: tomato;
+            border: 0 solid black;
+            cursor: pointer;
+        }
+
+        .buttonTd {
+            background-color: tomato;
+        }
+
+        #saveButton {
+            width: 49px;;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+        <h2>Books List</h2>
+        <div id="booksList"></div>
+        <div id="edit"></div>
+        <h3>Add a book to the list</h3>
+        <input type="text" id="bookTitle" placeholder="Enter Book's Title">
+        <input type="text" id="bookAuthor" placeholder="Enter Book's Author">
+        <input type="text" id="bookISBN" placeholder="Enter Book's ISBN">
+        <button class="buttons" id="addButton">Add</button>
+        <div id="errors"></div>
+    </div>
+
+<script src="js/jquery-2.2.1.js"></script>
+<script src="js/delete.js"></script>
+<script src="js/booksList.js"></script>
+<script src="js/add.js"></script>
+<script src="js/edit.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
