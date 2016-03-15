@@ -1,0 +1,31 @@
+﻿#wrapper {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+
+header {
+    margin: 0  auto;
+    width: 400px;
+}
+
+header nav ul {
+   background-color: black;
+    text-align: center;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 26px;
+    color: white;
+}
+
+header nav ul li a:hover {
+    color: tomato;
+}
