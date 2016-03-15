@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Towns By Country</title>
+    <style>
+        #wrapper {
+            margin: 0 auto;
+            width: 250px;
+        }
+        .buttons {
+            height: 50px;
+            width: 70px;
+            position: relative;
+            top: -18px;
+        }
+        h3 {
+            margin-bottom: 0;
+        }
+        .delSelect {
+            float: right;
+        }
+        .btn {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h3>List towns by country</h3>
+        <select name="select" id="select"></select>
+        <button id="button" class="elements">Show</button>
+        <div id="list"></div>
+
+        <h3>Add a new town!</h3>
+        <input type="text" id="countryInput" placeholder="Enter country name">
+        <input type="text" id="townInput" placeholder="Enter town name">
+        <button class="buttons" id="addButton">Add</button><br/><br/>
+        <hr>
+
+        <h3>Delete a town in a country</h3>
+        <a>Select a country: </a><select name="countrySelect" id="countrySelect" class="delSelect"></select><br/><br/>
+        <a>Select a town: </a><select name="townSelect" id="townSelect" class="delSelect"></select><br/><br/>
+        <button class="btn" id="deleteButton">Delete</button><br/><br/>
+        <hr>
+
+        <h3>Edit a town in a country</h3>
+        <a>Select a country: </a><select name="countrySelect" id="countryEditSelect" class="delSelect"></select><br/><br/>
+        <a>Select a town: </a><select name="townSelect" id="townEditSelect" class="delSelect"></select><br/><br/>
+        <input type="text" id="editInput" placeholder="Enter the new town name">
+        <button class="btn" id="editButton">Change</button><br/><br/>
+        <hr>
+        <div id="errors"></div>
+    </div>
+<script src="js/jquery-2.2.1.js"></script>
+<script src="js/townList.js"></script>
+<script src="js/sortByCountry.js"></script>
+<script src="js/add.js"></script>
+<script src="js/delete.js"></script>
+<script>
+    $( "#countryEditSelect" ).click(function() {
+        var countryName = $('#countryEditSelect').val();
+
+        function townsLoaded(data) {
+            var options = data;
+            $('#townEditSelect').empty();
+            $.each(options, function(i, p) {
+                $('#townEditSelect').append($('<option></option>').val(p.name).html(p.name));
+            });
+        }
+
+        function ajaxError() {
+            console.log('Cannot load AJAX data');
+        }
+
+        $.ajax({
+            method: 'GET',
+            headers: {
+                'Authorization' : 'Basic bmFza286MTIzNA==',
+                'X-Kinvey-API-Version' : '3'
+            },
+            contentType: 'application/json',
+
+            url: 'https://baas.kinvey.com/appdata/kid_WyWmkxXfkZ/Town?query={"country" : "' + countryName + '"}',
+            error: ajaxError,
+            success: townsLoaded
+        });
+    });
+
+    $( "#editButton" ).click(function() {
+        var town = $("#townEditSelect").val();
+        var country = $("#countryEditSelect").val();
+        var newTownName = $("#editInput").val();
+        var request = {"name" : newTownName , "country" : country };
+        var id;
+
+        for (var nameId in townId) {
+            if (townId[nameId].name === town && townId[nameId].country === country) {
+                id = townId[nameId].id;
+            }
+        }
+
+
+        function ajaxError() {
+            console.log('Cannot load AJAX data');
+        }
+
+        $.ajax({
+            method: 'PUT',
+            headers: {
+                'Authorization' : 'Basic bmFza286MTIzNA==',
+                'X-Kinvey-API-Version' : '3'
+            },
+            data: JSON.stringify(request),
+            dataType: "json",
+            contentType: 'application/json',
+
+            url: 'https://baas.kinvey.com/appdata/kid_WyWmkxXfkZ/Town/' + id,
+            error: ajaxError,
+            success: reload
+        });
+    });
+</script>
+</body>
+</html>
