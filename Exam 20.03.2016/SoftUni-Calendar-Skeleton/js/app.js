@@ -5,7 +5,7 @@ var app = app || {};
     var router = Sammy(function () {
         var selector = '#container';
         var menuSelector = '#menu';
-        var requester = app.requester.load('kid_ZJ5UCpE61W', 'eeae7a52b65546888ad9c95362f33b99', 'https://baas.kinvey.com/');
+        var requester = app.requester.load('kid_bkngeaspyZ', 'fe82b9a4da9e4135a79a06b7caceee84', 'https://baas.kinvey.com/');
 
         var userViewBag = app.userViewBag.load();
         var homeViewBag = app.homeViewBag.load();
