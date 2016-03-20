@@ -1,0 +1,15 @@
+    <h1>Books:</h1>
+    <table>
+        <tbody>
+        <tr><th></th><th>Title</th><th>Author</th><th>ISBN</th><th></th><th></th></tr>
+    {{#books}}
+        <tr>
+            <td class="buttonTd"><button class="editBook" data-id="{{_id}}" data-title="{{title}}" data-author="{{author}}" data-isbn="{{isbn}}">Edit</button></td>
+            <td>{{title}}</td><td>{{author}}</td><td>{{isbn}}</td>
+            <td class="buttonTd"><button class="deleteBook">Delete</button></td>
+            <td class="buttonTd"><button class="addBook">Add Book</button></td>
+        </tr>
+    {{/books}}
+        </tbody>
+    </table>
+<a href="#/logout"><button>Logout</button></a>

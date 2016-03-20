@@ -1,0 +1,43 @@
+#wrapper {
+    margin: 0  auto;
+    width: 700px;
+    margin-top: 20px;;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    height: 20px;
+    text-align: center;
+    background-color: tomato;
+}
+td {
+    padding: 0 10px 0 10px;
+}
+
+.delButton {
+    background-color: tomato;
+    border: 0 solid black;
+    cursor: pointer;
+}
+
+.editButton {
+    background-color: tomato;
+    border: 0 solid black;
+    cursor: pointer;
+}
+
+.buttonTd {
+    background-color: tomato;
+}
+
+#saveButton {
+    width: 49px;;
+}
